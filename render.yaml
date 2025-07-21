@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: calculator
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    branch: main
+    autoDeploy: true
