@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Python Calculator</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <p>CALCULATOR</p>
+    <div class="display"><input type="text" id="display" readonly placeholder="0"></div>
+  <div class="buttons">
+    <button onclick="press('1')">1</button>
+    <button onclick="press('2')">2</button>
+    <button onclick="press('3')">3</button>
+    <button onclick="press('+')" id="orange">+</button>
+    <button onclick="press('4')">4</button>
+    <button onclick="press('5')">5</button>
+    <button onclick="press('6')">6</button>
+    <button onclick="press('-')" id="orange">–</button>
+    <button onclick="press('7')">7</button>
+    <button onclick="press('8')">8</button>
+    <button onclick="press('9')">9</button>
+    <button onclick="press('*')" id="orange">×</button>
+    <button onclick="clearDisplay()" id="orange">AC</button>
+    <button onclick="press('0')">0</button>
+    <button onclick="calculate()" id="orange">=</button>
+    <button onclick="press('/')" id="orange">÷</button>
+  </div>
+  </div>
+</body>
+</html>
