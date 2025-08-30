@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4568DC;
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    overflow: hidden;
+}
+.title{
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8800, #ffcc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    font-weight: 600;
+    z-index: -9999;
+}
+.calc {
+    background: rgba(0, 0, 0, 0.068);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.441);
+    z-index: 1;
+}
+.calc .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,60px);
+    grid-gap: 10px;
+}
+button{
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.139);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.194)  ;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.calc .buttons input{
+    grid-column: span 4;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    background: rgba(2, 2, 2, 0);
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    padding: 0 10px;
+    cursor: default;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+}
+input:focus, button:focus{
+    outline: none;
+}
+button:active{
+    transform: scale(0.95);
+    background-color:#0000001b ;
+}
+.orange{
+    
+    color: rgb(255, 140, 0);
+}
+.orange0{
+    background: rgb(255, 140, 0);
+    color: #fff;
+}
+.orange0:active{
+    background: rgb(255, 120, 0);
+}
+.heart-effect {
+    z-index: -9999;
+}
+/* Additional styles for footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    z-index: -9999;
+    color: #ffffff77;
+}
+
+/* responsive layout ofr mobiles and tablets */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 40px;
+    }
+    .title {
+        position: static;
+        margin-bottom: 70px;
+    }
+    .calc {
+        margin-top: 0;
+        width: 90vw;
+        max-width: 320px;
+        padding: 12px;
+        position: relative;
+        margin-bottom: 130px;
+    }
+    .calc .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,66px);
+    grid-gap: 10px;
+    justify-content: center;
+    }
+    footer {
+        position: static;
+        margin-top: 20px;
+        font-size: 13px;
+    }
+}

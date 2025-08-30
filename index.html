@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <div class="title" data-aos="fade-down" data-aos-duration="800">
+        <h1>Calculator</h1>
+    </div>
+    <div class="calc" data-aos="fade-up" data-aos-duration="800">
+        <div class="buttons">
+            <input type="text" id="display" readonly placeholder="0" value="">
+            <button class="orange" id="allclear" value="AC">AC</button>
+            <button class="orange" id="clear" value="X">✕</button>
+            <button class="orange" id="modulo" value="%">%</button>
+            <button class="orange" id="divide" value="/">÷</button>
+            <button id="1" value="1">1</button>
+            <button id="2" value="2">2</button>
+            <button id="3" value="3">3</button>
+            <button class="orange" id="multiply" value="*">×</button>
+            <button id="4" value="4">4</button>
+            <button id="5" value="5">5</button>
+            <button id="6" value="6">6</button>
+            <button class="orange" id="subtract" value="-">−</button>
+            <button id="7" value="7">7</button>
+            <button id="8" value="8">8</button>
+            <button id="9" value="9">9</button>
+            <button class="orange" id="add" value="+">+</button>
+            <button class="orange" id="converter">※</button>
+            <button id="0" value="0">0</button>
+            <button class="orange" id="decimal" value=".">.</button>
+            <button class="orange0" id="equals" value="=">=</button>
+            
+        </div>
+    </div>
+    <footer>
+        <p> calculator web app, made with 💗.</p>
+    </footer>
+</body>
+<script>
+    AOS.init(); // Initialize AOS library
+    // Calculator functionality
+
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const value = button.value;
+            if (value === 'AC') {
+                display.value = ''; // clears display
+            } else if (value === 'X') {
+                display.value = display.value.slice(0, -1); // remove last character 
+            }
+            else if (value === '=') {
+                try {
+                    display.value = eval(display.value);
+                } catch {
+                    display.value = 'Error';
+                }
+            } else if (value === '※') {
+                // Placeholder for converter functionality
+                alert('Converter function is not implemented yet.');
+            } else {
+                display.value += value;
+            }
+        });
+    });
+
+
+        // Heart effect on mouse move
+
+        document.addEventListener('mousemove', function(e) {
+        const emoji = '💗';
+        const heart = document.createElement('span');
+        heart.textContent = emoji;
+        heart.className = 'heart-effect';
+        heart.style.position = 'fixed';
+        heart.style.left = (e.clientX - 10) + 'px';
+        heart.style.top = (e.clientY - 10) + 'px';
+        heart.style.pointerEvents = 'none';
+        heart.style.fontSize = '24px';
+        heart.style.opacity = '1';
+        heart.style.transition = 'opacity 1s, transform 1s';
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.style.opacity = '0';
+            heart.style.transform = 'translateY(-30px) scale(1.5)';
+        }, 10);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 1000);
+    });
+</script>
+</html>
