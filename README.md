@@ -4,8 +4,7 @@ A simple and responsive calculator built using **HTML, CSS, and JavaScript**.
 
 ---
 
-to view the webpage click the below link :
-link = () => https://noothan07.github.io/calculator/
+to view the webpage click the link => https://noothan07.github.io/calculator/
 
 ---
 
@@ -26,10 +25,11 @@ It is designed as part of my practice in **JavaScript DOM manipulation** and **f
 
 ## 📸 Screenshots
 
-### Home Page
+### webPage desktop view
 ![Home Page](https://github.com/noothan07/calculator/blob/main/assests/calculator_webview.png?raw=true)
 
-
+### webpage mobile view
+![mobile view](https://github.com/noothan07/calculator/blob/main/assests/mobileView.jpg?raw=true)
 ## ⚡ Getting Started
 
 ### Clone the repository
