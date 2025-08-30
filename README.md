@@ -26,10 +26,8 @@ It is designed as part of my practice in **JavaScript DOM manipulation** and **f
 ## 📸 Screenshots
 
 ### webPage desktop view
-![Home Page](https://github.com/noothan07/calculator/blob/main/assests/calculator_webview.png?raw=true)
+![Home Page](https://github.com/noothan07/calculator/blob/main/assests/cal_webview.png?raw=true)
 
-### webpage mobile view
-![mobile view](https://github.com/noothan07/calculator/blob/main/assests/mobileView.jpg?raw=true)
 ## ⚡ Getting Started
 
 ### Clone the repository
